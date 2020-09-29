@@ -35,14 +35,19 @@ public class MainActivity2 extends AppCompatActivity {
                 } else {
                     Intent intent = getIntent();
                     ArrayList<String> tareas = intent.getStringArrayListExtra("tareas");
+                    for (String s : tareas) {
+                        if (s.equals(nuevaTarea)) {
+                            editTextNuevaTarea.setError("No puede haber repetidas");
+                        }
+                    }
                     tareas.add(nuevaTarea);
                     intent.putStringArrayListExtra("tareas", tareas);
                     setResult(RESULT_OK, intent);
                     finish();
                 }
-
-
             }
+
+
         });
 
     }
