@@ -11,7 +11,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<String> tareas = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,23 +19,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-    public void abrirRegistroTarea(View view){
-        Intent intent = new Intent(this,MainActivity2.class);
-        intent.putStringArrayListExtra("tareas",tareas);
-        int requestCode = 1;
-        startActivityForResult(intent,requestCode);
-    }
-
-    protected void onActivityResult (int requestCode, int resultCode,@Nullable Intent data) {
-
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1 && resultCode == RESULT_OK) {
-            ArrayList<String> tareas = data.getStringArrayListExtra("tareas");
-        }
-
-    }
 
 
 
