@@ -36,7 +36,7 @@ public class RegistroActivity extends AppCompatActivity {
                 String codigo = editTextCodigo.getText().toString();
                 String dni = editTextdni.getText().toString();
                 String password = editTextpassword.getText().toString();
-                String carrera = spinner.getTransitionName().toString();
+                String carrera = spinner.getTransitionName();
 
                 if (nombre.isEmpty()){
                     editTextNombre.setError("No puede ser vacío");

@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         botonTelito.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                Intent intent = getIntent();
+                String nombre = intent.getStringExtra("nombre");
+
                 TextView textViewCont = findViewById(R.id.contador);
                 String contadorStr = textViewCont.getText().toString();
                 int contador = Integer.parseInt(contadorStr);
