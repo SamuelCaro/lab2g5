@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context="com.example.lab2g5.MainActivity2">
 
     <TextView
         android:id="@+id/agregarNuevaTareaText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Agregar Nueva Tarea: "
+        android:text="@string/agregar_nueva_tarea"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
         android:id="@+id/buttonAgregar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Agregar"
+        android:text="@string/agregar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -36,11 +36,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nueva Tarea"
+        android:text="@string/nueva_tarea"
         app:layout_constraintBottom_toTopOf="@+id/buttonAgregar"
         app:layout_constraintEnd_toEndOf="@+id/agregarNuevaTareaText"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/agregarNuevaTareaText"
         app:layout_constraintTop_toBottomOf="@+id/agregarNuevaTareaText"
-        app:layout_constraintVertical_bias="0.297" />
+        app:layout_constraintVertical_bias="0.297"
+        android:autofillHints="" />
 </androidx.constraintlayout.widget.ConstraintLayout>

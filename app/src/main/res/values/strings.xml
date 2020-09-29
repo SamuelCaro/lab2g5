@@ -10,6 +10,9 @@
     <string name="especialidad">Especialidad</string>
     <string name="apellido">Apellido</string>
     <string name="has_desbloqueado_la_opci_n_oscura">Has desbloqueado la opción oscura</string>
+    <string name="agregar_nueva_tarea">Agregar Nueva Tarea:</string>
+    <string name="agregar">Agregar</string>
+    <string name="nueva_tarea">Nueva Tarea</string>
     <string-array name="carreras">
         <item>Telecom</item>
         <item>Electrónica</item>
