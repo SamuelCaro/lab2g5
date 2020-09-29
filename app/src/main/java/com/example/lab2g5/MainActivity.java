@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageButton botonTelito = findViewById(R.id.botonTelito);
-
         botonTelito.setOnClickListener(new View.OnClickListener() {
             @Override
 
