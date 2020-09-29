@@ -48,10 +48,6 @@ public class RegistroActivity extends AppCompatActivity {
 
                 if (codigo.isEmpty()){
                     editTextCodigo.setError("No puede ser vacío");
-                }else {
-
-
-
                 }
 
                 if (dni.isEmpty()){
@@ -82,7 +78,7 @@ public class RegistroActivity extends AppCompatActivity {
                                     intent.putExtra("apellido", apellido);
                                     intent.putExtra("dni", dni);
                                     intent.putExtra("codigo", codigo);
-                                    intent.putExtra("spinnerCadena", carrera);
+                                    intent.putExtra("spinnerCarrera", carrera);
 
                                     startActivity(new Intent(RegistroActivity.this, MainActivity.class));
                                     finish();

@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">lab2g5</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="nombre">Nombre</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="contrasena_incorrecta">Contraseña incorrecta</string>
+    <string name="codigo">Código</string>
+    <string name="dni">DNI</string>
+    <string name="especialidad">Especialidad</string>
     <string-array name="carreras">
         <item>Telecom</item>
         <item>Electrónica</item>
