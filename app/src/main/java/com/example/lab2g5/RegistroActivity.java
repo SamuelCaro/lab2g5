@@ -36,42 +36,41 @@ public class RegistroActivity extends AppCompatActivity {
                 String codigo = editTextCodigo.getText().toString();
                 String dni = editTextdni.getText().toString();
                 String password = editTextpassword.getText().toString();
-                String carrera = spinner.getTransitionName().toString();
+                String carrera = spinner.getTransitionName();
 
-                if (nombre.isEmpty()){
+                if (nombre.isEmpty()) {
                     editTextNombre.setError("No puede ser vacío");
                 }
 
-                if (apellido.isEmpty()){
+                if (apellido.isEmpty()) {
                     editTextApellido.setError("No puede ser vacío");
                 }
 
-                if (codigo.isEmpty()){
+                if (codigo.isEmpty()) {
                     editTextCodigo.setError("No puede ser vacío");
                 }
 
-                if (dni.isEmpty()){
+                if (dni.isEmpty()) {
                     editTextdni.setError("No puede ser vacío");
                 }
 
-                if (password.isEmpty()){
+                if (password.isEmpty()) {
                     editTextpassword.setError("No puede ser vacío");
                 }
 
-                if(!nombre.isEmpty() && !password.isEmpty() && !apellido.isEmpty() && !codigo.isEmpty() && !dni.isEmpty()  && password.equalsIgnoreCase("S3cr3t306")){
+                if (!nombre.isEmpty() && !password.isEmpty() && !apellido.isEmpty() && !codigo.isEmpty() && !dni.isEmpty() && password.equalsIgnoreCase("S3cr3t306")) {
 
                     try {
                         int cod = Integer.valueOf(codigo);
 
                         int codvalido = cod / 10000;
-                        if (codvalido<= 2017 && codvalido >= 2012){
+                        if (codvalido <= 2017 && codvalido >= 2012) {
 
                             try {
 
                                 int longituddni = dni.length();
-                                if (longituddni == 8){
+                                if (longituddni == 8) {
                                     int dniva = Integer.valueOf(dni);
-
                                     Toast.makeText(RegistroActivity.this, "Ingreso correcto", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(RegistroActivity.this, MainActivity.class);
                                     intent.putExtra("nombre", nombre);
@@ -79,34 +78,28 @@ public class RegistroActivity extends AppCompatActivity {
                                     intent.putExtra("dni", dni);
                                     intent.putExtra("codigo", codigo);
                                     intent.putExtra("spinnerCarrera", carrera);
-
                                     startActivity(new Intent(RegistroActivity.this, MainActivity.class));
-                                    finish();
                                 }
 
-                            }catch (NumberFormatException e){
+                            } catch (NumberFormatException e) {
                                 editTextdni.setError("dni no válido");
                             }
 
 
                         }
-                    }catch (NumberFormatException e){
+                    } catch (NumberFormatException e) {
                         editTextCodigo.setError("código no permitido");
                     }
 
 
-                }else {
+                } else {
                     TextView textView = findViewById(R.id.textViewError);
                     textView.setVisibility(View.VISIBLE);
                 }
 
 
-
             }
         });
-
-
-
-
     }
+
 }

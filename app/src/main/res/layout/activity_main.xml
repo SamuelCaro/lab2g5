@@ -85,6 +85,7 @@
         android:layout_marginStart="72dp"
         android:layout_marginBottom="380dp"
         android:text="contador"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -124,6 +125,18 @@
             android:visibility="invisible" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/desbloqueo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contador"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.576" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

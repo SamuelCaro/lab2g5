@@ -9,6 +9,7 @@
     <string name="dni">DNI</string>
     <string name="especialidad">Especialidad</string>
     <string name="apellido">Apellido</string>
+    <string name="has_desbloqueado_la_opci_n_oscura">Has desbloqueado la opción oscura</string>
     <string-array name="carreras">
         <item>Telecom</item>
         <item>Electrónica</item>

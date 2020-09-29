@@ -37,13 +37,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 TextView textViewCont = findViewById(R.id.contador);
+                TextView textViewDesblo = findViewById(R.id.desbloqueo);
                 String contadorStr = textViewCont.getText().toString();
                 int contador = Integer.parseInt(contadorStr);
                 contador++;
-                //   if (contador == 6){
+                if (contador == 6){
+
+                    textViewDesblo.setVisibility(View.VISIBLE);
 
 
-                // }
+                }
+                contador=0;
                 Log.d("contador", "" + contador);
 
                 textViewCont.setText(String.valueOf(contador));
@@ -78,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, requestCode);
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
 
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == RESULT_OK) {
