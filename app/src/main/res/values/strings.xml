@@ -7,6 +7,7 @@
     <string name="codigo">Código</string>
     <string name="dni">DNI</string>
     <string name="especialidad">Especialidad</string>
+    <string name="apellido">Apellido</string>
     <string-array name="carreras">
         <item>Telecom</item>
         <item>Electrónica</item>
