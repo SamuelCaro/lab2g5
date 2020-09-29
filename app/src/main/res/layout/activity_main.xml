@@ -12,7 +12,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PucpToDoList"
+        android:text="@string/pucptodolist"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="11dp"
-        android:text="Registrar Sesión Nuevamente"
+        android:text="@string/registrar_sesi_n_nuevamente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonTelito"
         app:layout_constraintTop_toTopOf="@+id/botonTelito" />
@@ -54,7 +54,7 @@
         android:layout_marginTop="69dp"
         android:layout_marginEnd="70dp"
         android:onClick="abrirRegistroTarea"
-        android:text="Agregar To Do"
+        android:text="@string/agregar_to_do"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonCivil"
         app:layout_constraintTop_toBottomOf="@+id/registrarAgain" />
@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginBottom="380dp"
-        android:text="contador"
+        android:text="@string/contador"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -118,10 +118,10 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/nombreusuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No hay tareas pendientes"
+            android:text="@string/no_hay_tareas_pendientes"
             android:visibility="invisible" />
 
     </LinearLayout>
@@ -130,7 +130,7 @@
         android:id="@+id/desbloqueo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/textview"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"

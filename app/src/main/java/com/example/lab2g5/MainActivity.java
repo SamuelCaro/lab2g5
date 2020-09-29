@@ -30,7 +30,14 @@ public class MainActivity extends AppCompatActivity {
 
         botonTelito.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+
+            public void onClick(View v){
+                Intent intent = getIntent();
+                String nombre = intent.getStringExtra("nombre");
+                String carrera = intent.getStringExtra("spinnerCarrera");
+
+
+
                 TextView textViewCont = findViewById(R.id.contador);
                 TextView textViewDesblo = findViewById(R.id.desbloqueo);
                 String contadorStr = textViewCont.getText().toString();
@@ -61,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             seccionIndustria.addView(opcion);
         }
 
-        TextView textView = findViewById(R.id.textView2);
+        TextView textView = findViewById(R.id.nombreusuario);
         if(tareas.isEmpty()){
             textView.setVisibility(View.VISIBLE);
         }
@@ -89,8 +96,11 @@ public class MainActivity extends AppCompatActivity {
                 opcion.setLayoutParams(
                         new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
                 seccionIndustria.addView(opcion);
+                if(opcion.isChecked()){
+                    opcion.setVisibility(View.INVISIBLE);
+                }
             }
-            TextView textView = findViewById(R.id.textView2);
+            TextView textView = findViewById(R.id.nombreusuario);
             if(tareas.isEmpty()){
                 textView.setVisibility(View.VISIBLE);
             }else{
@@ -101,16 +111,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-    public static String[] INDUSTRIAS = {
-            "Arte",
-            "Computación",
-            "Ingeniería civil",
-            "Bioquímica",
-            "Música",
-            "Astronomía",
-            "Zoología"
-    };
 
 
 }
