@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">lab2g5</string>
+    <string-array name="carreras">
+        <item>Telecom</item>
+        <item>Electrónica</item>
+        <item>Mecatrónica</item>
+    </string-array>
 </resources>
